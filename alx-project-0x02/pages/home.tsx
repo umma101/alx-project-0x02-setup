@@ -1,13 +1,17 @@
+// pages/home.tsx
+import React from 'react';
 import Header from '../components/layout/Header';
 
-export default function Home() {
-    return (
-        <>
+const HomePage = () => {
+  return (
+    <>
       <Header />
-      <main style={{ padding: '2rem', textAlign: 'center' }}>
+      <main style={{ padding: '2rem' }}>
         <h1>Home Page</h1>
-        <p>Welcome to the Home page of this Next.js app.</p>
+        <p>Welcome to the Home page.</p>
       </main>
     </>
   );
-}
+};
+
+export default HomePage;
