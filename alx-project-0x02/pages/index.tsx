@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '../components/layout/header'; //
 
 export default function Home() {
   return (
@@ -7,6 +8,8 @@ export default function Home() {
         <title>Welcome to My Website</title>
         <meta name="description" content="A friendly welcome page built with Next.js" />
       </Head>
+
+      <Header /> {/* ✅ Include your Header here */}
 
       <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column' }}>
         <h1 style={{ fontSize: '3rem', color: '#333' }}>Welcome to My Website!</h1>
