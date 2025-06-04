@@ -1,23 +1,14 @@
 // pages/posts.tsx
 import { GetStaticProps } from 'next';
-
 import { PostProps } from '@/interfaces';
-import PostCard from '@/components/common/PostCard';
 import Header from '@/components/layout/Header';
+import PostCard from '@/components/common/PostCard';
 
-const PostsPage = () => {
-  const [posts, setPosts] = useState<PostProps[]>([]);
+interface PostsPageProps {
+  posts: PostProps[];
+}
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-      const data: PostProps[] = await res.json();
-      setPosts(data.slice(0, 10)); // optional: only take first 10 posts
-    };
-
-    fetchPosts();
-  }, []);
-
+const PostsPage = ({ posts }: PostsPageProps) => {
   return (
     <>
       <Header />
@@ -37,9 +28,16 @@ const PostsPage = () => {
   );
 };
 
+// ✅ Add getStaticProps
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts: PostProps[] = await res.json();
+
+  return {
+    props: {
+      posts: posts.slice(0, 10), // optional: limit to 10 posts
+    },
+  };
+};
+
 export default PostsPage;
-
-
-
-
-
