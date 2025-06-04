@@ -1,5 +1,3 @@
-// pages/home.tsx
-import React from 'react';
 import Header from '../components/layout/Header';
 
 const HomePage = () => {
@@ -8,7 +6,7 @@ const HomePage = () => {
       <Header />
       <main style={{ padding: '2rem' }}>
         <h1>Home Page</h1>
-        <p>Welcome to the Home page.</p>
+        <p>This is the home page content.</p>
       </main>
     </>
   );

@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../components/layout/header'; //
+import Header from '../components/layout/Header';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -9,9 +9,9 @@ export default function Home() {
         <meta name="description" content="A friendly welcome page built with Next.js" />
       </Head>
 
-      <Header /> {/* ✅ Include your Header here */}
+      <Header />
 
-      <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column' }}>
+      <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', flexDirection: 'column' }}>
         <h1 style={{ fontSize: '3rem', color: '#333' }}>Welcome to My Website!</h1>
         <p style={{ fontSize: '1.2rem', color: '#666' }}>
           This is a simple homepage built with Next.js.
@@ -19,4 +19,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;

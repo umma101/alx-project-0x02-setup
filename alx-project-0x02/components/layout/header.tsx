@@ -1,20 +1,12 @@
-// components/layout/Header.tsx
 import Link from 'next/link';
-import React from 'react';
 
 const Header = () => {
   return (
-    <header style={{
-      backgroundColor: '#000',
-      padding: '1rem 2rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-      <h2>My Website</h2>
+    <header style={{ backgroundColor: '#000', color: '#fff', padding: '1rem' }}>
+      
       <nav>
-        <Link href="/home" style={{ marginRight: '1rem' }}>Home</Link>
-        <Link href="/about">About</Link>
+        <Link href="/home" style={{ color: '#fff', marginRight: '1rem' }}>Home</Link>
+        <Link href="/about" style={{ color: '#fff' }}>About</Link>
       </nav>
     </header>
   );
