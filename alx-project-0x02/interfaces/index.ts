@@ -8,3 +8,10 @@ export interface ButtonProps {
   shape?: 'rounded-sm' | 'rounded-md' | 'rounded-full';
   onClick?: () => void;
 }
+// interfaces/index.ts
+export interface PostProps {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
